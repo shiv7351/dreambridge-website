@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal - DreamBridge Media</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Legal information, privacy policy, and compliance details for DreamBridge Media digital entertainment services.">
+    <meta name="keywords" content="legal, privacy policy, compliance, dreambridge media legal">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dream-purple': '#6366f1',
+                        'dream-pink': '#ec4899',
+                        'dream-blue': '#06b6d4',
+                        'dream-gold': '#f59e0b',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-10 w-auto">
+                    <span class="text-xl font-heading font-bold text-dream-purple">DreamBridge Media</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">About</a>
+                    <a href="services.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Services</a>
+                    <a href="contact.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl md:text-8xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Legal <span class="text-dream-purple">Information</span>
+                </h1>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Transparency, compliance, and legal framework governing DreamBridge Media services
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Legal Content -->
+    <section class="relative py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <!-- Privacy Policy -->
+            <div class="legal-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Privacy Policy</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        <strong>Effective Date:</strong> June 22, 2025
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Information We Collect</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        DreamBridge Media collects information necessary to provide our digital entertainment services, including:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Contact information (name, email, phone number)</li>
+                        <li>Professional information (social media handles, content portfolios)</li>
+                        <li>Business requirements and project specifications</li>
+                        <li>Communication preferences and interaction history</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How We Use Information</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        We use collected information to:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Provide talent management and brand partnership services</li>
+                        <li>Develop and execute marketing campaigns</li>
+                        <li>Communicate about projects and opportunities</li>
+                        <li>Improve our services and user experience</li>
+                        <li>Comply with legal and regulatory requirements</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Data Protection</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        We implement industry-standard security measures to protect personal information against unauthorized access, alteration, disclosure, or destruction. All sensitive data is encrypted and stored securely.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Third-Party Sharing</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        We do not sell, trade, or rent personal information to third parties. Information may be shared with trusted partners only when necessary to deliver services and only with explicit consent.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Data Protection -->
+            <div class="legal-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Data Protection & GDPR Compliance</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        DreamBridge Media is committed to protecting the privacy and data rights of all individuals, including those protected under GDPR and other applicable data protection laws.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Your Rights</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li><strong>Right to Access:</strong> Request copies of your personal data</li>
+                        <li><strong>Right to Rectification:</strong> Correct inaccurate personal information</li>
+                        <li><strong>Right to Erasure:</strong> Request deletion of personal data</li>
+                        <li><strong>Right to Portability:</strong> Transfer data to another service</li>
+                        <li><strong>Right to Object:</strong> Opt out of certain data processing activities</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact for Data Requests</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        To exercise your data rights or for any privacy-related inquiries, contact us at:
+                        <br><strong>Email:</strong> contact@dreambridgemedia.in
+                        <br><strong>Response Time:</strong> Within 30 days of request
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Intellectual Property -->
+            <div class="legal-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Intellectual Property</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Content Ownership</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        All content created by DreamBridge Media, including but not limited to videos, graphics, written content, and campaign materials, remains the intellectual property of the commissioning client unless otherwise specified in writing.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Creator Rights</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Creators retain rights to their personal brand, likeness, and original creative concepts. DreamBridge Media serves as a facilitator and does not claim ownership of creator's personal intellectual property.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Brand Usage</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Use of brand names, logos, and trademarks requires explicit written permission. All parties agree to respect intellectual property rights throughout the duration of any business relationship.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Liability & Disclaimers -->
+            <div class="legal-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Liability & Disclaimers</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Service Delivery</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        DreamBridge Media commits to delivering services with professional standards and industry best practices. While we strive for exceptional results, specific outcomes cannot be guaranteed due to the dynamic nature of digital marketing and content creation.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Third-Party Platforms</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Our services often involve third-party platforms (social media, advertising networks, etc.). DreamBridge Media is not responsible for changes in platform policies, algorithms, or availability that may affect campaign performance.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Limitation of Liability</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        DreamBridge Media's liability is limited to the value of services provided. We are not liable for indirect, consequential, or punitive damages arising from our services or business relationships.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="legal-section">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Legal Contact</h2>
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        For legal inquiries, compliance questions, or formal communications:
+                    </p>
+                    <div class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <p><strong>Support Department:</strong> support@dreambridgemedia.in</p>
+                        <p><strong>Contact:</strong> contact@dreambridgemedia.in</p>
+                        <p><strong>Response Time:</strong> 5-10 business days for legal matters</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="relative bg-gray-900 dark:bg-black text-white py-16 z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-12 w-auto">
+                        <span class="text-2xl font-heading font-bold">DreamBridge Media</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Empowering Talents. Elevating Brands. Creating Legacy.
+                    </p>
+                    <p class="text-gray-500 italic">
+                        "Ohhh… just like that, a bridge got built – a DreamBridge! 😆"
+                    </p>
+                    <p><strong>Contact : </strong>contact@dreambridgemedia.in</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html#talent-management" class="hover:text-dream-purple transition-colors">Talent Management</a></li>
+                        <li><a href="services.html#influencer-marketing" class="hover:text-dream-purple transition-colors">Influencer Marketing</a></li>
+                        <li><a href="services.html#content-production" class="hover:text-dream-purple transition-colors">Content Production</a></li>
+                        <li><a href="services.html#brand-strategy" class="hover:text-dream-purple transition-colors">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-dream-purple transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-dream-purple transition-colors">Contact</a></li>
+                        <li><a href="legal.html" class="hover:text-dream-purple transition-colors">Legal</a></li>
+                        <li><a href="terms.html" class="hover:text-dream-purple transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 DreamBridge Media. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="https://www.instagram.com/dreambridge.media/" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@dreambridge-media?si=PjMEeRAZiU1YA4ta" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreambridge-media" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/DreamBridgeM?t=MyayBaqWYIBngdS0k20zPA&s=08" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/DreamBridgeMedia?rdid=TCPnpbcr5nYmdWxr&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CBznoBxjW%2F" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="mailto:contact@dreambridgemedia.in" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://linktr.ee/dreambridgemedia" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-link text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/theme-toggle.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

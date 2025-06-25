@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - DreamBridge Media</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore DreamBridge Media's comprehensive digital entertainment services including talent management, influencer marketing, content production, and brand strategy.">
+    <meta name="keywords" content="talent management, influencer marketing, content production, brand partnerships, digital strategy, creator services">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dream-purple': '#6366f1',
+                        'dream-pink': '#ec4899',
+                        'dream-blue': '#06b6d4',
+                        'dream-gold': '#f59e0b',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+    <!-- Bridge Background Canvas -->
+    <canvas id="bridge-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+    
+    <!-- Stars Background -->
+    <div id="stars" class="fixed inset-0 w-full h-full pointer-events-none z-0"></div>
+    
+    <!-- Cursor Trail -->
+    <div id="cursor-trail" class="fixed pointer-events-none z-50"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-10 w-auto">
+                    <span class="text-xl font-heading font-bold text-dream-purple">DreamBridge Media</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">About</a>
+                    <a href="services.html" class="nav-link text-dream-purple font-semibold">Services</a>
+                    <a href="contact.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 z-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl md:text-8xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Our <span class="text-dream-purple">Services</span>
+                </h1>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                    A comprehensive digital entertainment ecosystem designed to empower creators and elevate brands through strategic partnerships and innovative solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Overview -->
+    <section class="relative py-20 z-20">
+        <div class="container mx-auto px-6">
+            <div class="services-detailed-grid space-y-20">
+                
+                <!-- Talent & Creator Management -->
+                <div class="service-detailed-card" id="talent-management">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="service-content">
+                            <div class="service-icon mb-6">
+                                <i class="fas fa-users text-6xl text-dream-purple"></i>
+                            </div>
+                            <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                                Talent & Creator Management
+                            </h2>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                                Comprehensive talent management services designed to transform creators into industry leaders through strategic planning, brand development, and growth acceleration.
+                            </p>
+                            
+                            <div class="service-features space-y-4">
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-purple/10 p-3 rounded-full group-hover:bg-dream-purple group-hover:text-white transition-all">
+                                            <i class="fas fa-star text-dream-purple group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Influencer Talent Management</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">End-to-end talent representation and career guidance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-pink/10 p-3 rounded-full group-hover:bg-dream-pink group-hover:text-white transition-all">
+                                            <i class="fas fa-paint-brush text-dream-pink group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Personal Brand Development</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Strategic brand positioning and identity creation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-blue/10 p-3 rounded-full group-hover:bg-dream-blue group-hover:text-white transition-all">
+                                            <i class="fas fa-chart-line text-dream-blue group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Growth Strategy & Analytics</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Data-driven strategies for platform growth and engagement</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-gold/10 p-3 rounded-full group-hover:bg-dream-gold group-hover:text-white transition-all">
+                                            <i class="fas fa-handshake text-dream-gold group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Brand Deals & Negotiation</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Professional contract negotiation and partnership management</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-visual">
+                            <img src="../assets/TalentManagement.jpg" alt="Talent Management" class="w-full rounded-2xl shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Influencer Marketing -->
+                <div class="service-detailed-card" id="influencer-marketing">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="service-visual lg:order-1">
+                            <img src="../assets/BrandPartnerships.jpg" alt="Brand Partnerships" class="w-full rounded-2xl shadow-2xl">
+                        </div>
+                        
+                        <div class="service-content lg:order-2">
+                            <div class="service-icon mb-6">
+                                <i class="fas fa-handshake text-6xl text-dream-pink"></i>
+                            </div>
+                            <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                                Influencer Marketing & Brand Partnerships
+                            </h2>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                                Strategic brand-creator collaborations that drive authentic engagement and measurable results through carefully curated partnerships and data-driven campaigns.
+                            </p>
+                            
+                            <div class="service-features space-y-4">
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-pink/10 p-3 rounded-full group-hover:bg-dream-pink group-hover:text-white transition-all">
+                                            <i class="fas fa-bullseye text-dream-pink group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Brand-Creator Campaign Strategy</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Custom campaign development for maximum brand impact</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-purple/10 p-3 rounded-full group-hover:bg-dream-purple group-hover:text-white transition-all">
+                                            <i class="fas fa-search text-dream-purple group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Influencer Discovery & Mapping</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">AI-powered talent matching for perfect brand-creator fit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-blue/10 p-3 rounded-full group-hover:bg-dream-blue group-hover:text-white transition-all">
+                                            <i class="fas fa-cogs text-dream-blue group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">End-to-End Campaign Execution</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Complete campaign management from concept to delivery</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-gold/10 p-3 rounded-full group-hover:bg-dream-gold group-hover:text-white transition-all">
+                                            <i class="fas fa-analytics text-dream-gold group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Performance Tracking & ROI</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Comprehensive analytics and return on investment reporting</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Production -->
+                <div class="service-detailed-card" id="content-production">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="service-content">
+                            <div class="service-icon mb-6">
+                                <i class="fas fa-video text-6xl text-dream-blue"></i>
+                            </div>
+                            <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                                In-House Content Production
+                            </h2>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                                Professional content creation services from concept to delivery, featuring state-of-the-art equipment, creative direction, and post-production excellence.
+                            </p>
+                            
+                            <div class="service-features space-y-4">
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-blue/10 p-3 rounded-full group-hover:bg-dream-blue group-hover:text-white transition-all">
+                                            <i class="fas fa-film text-dream-blue group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Branded Content Creation</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">High-quality branded content for all social platforms</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-red-500/10 p-3 rounded-full group-hover:bg-red-500 group-hover:text-white transition-all">
+                                            <i class="fab fa-youtube text-red-500 group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">YouTube Video Production</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Complete video production from script to final edit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-purple/10 p-3 rounded-full group-hover:bg-dream-purple group-hover:text-white transition-all">
+                                            <i class="fas fa-camera text-dream-purple group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Studio Shoots & Setups</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Professional studio environment for premium content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-pink/10 p-3 rounded-full group-hover:bg-dream-pink group-hover:text-white transition-all">
+                                            <i class="fas fa-edit text-dream-pink group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Scripting & Post-Production</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Expert scripting, direction, and editing services</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-visual">
+                            <img src="../assets/ContentProduction.jpg" alt="Content Production" class="w-full rounded-2xl shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brand Strategy -->
+                <div class="service-detailed-card" id="brand-strategy">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="service-visual lg:order-1">
+                            <img src="../assets/BrandStrategy.jpg" alt="Brand Strategy" class="w-full rounded-2xl shadow-2xl">
+                        </div>
+                        
+                        <div class="service-content lg:order-2">
+                            <div class="service-icon mb-6">
+                                <i class="fas fa-rocket text-6xl text-dream-gold"></i>
+                            </div>
+                            <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                                Brand Strategy & Growth Services
+                            </h2>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                                Comprehensive brand strategy development and growth acceleration through data-driven insights, trend analysis, and innovative digital marketing approaches.
+                            </p>
+                            
+                            <div class="service-features space-y-4">
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-gold/10 p-3 rounded-full group-hover:bg-dream-gold group-hover:text-white transition-all">
+                                            <i class="fas fa-compass text-dream-gold group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">360° Digital Campaign Planning</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Holistic campaign strategies across all digital touchpoints</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-purple/10 p-3 rounded-full group-hover:bg-dream-purple group-hover:text-white transition-all">
+                                            <i class="fas fa-users text-dream-purple group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Audience Building & Growth</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Strategic community development and engagement optimization</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-pink/10 p-3 rounded-full group-hover:bg-dream-pink group-hover:text-white transition-all">
+                                            <i class="fas fa-trending-up text-dream-pink group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Trend Spotting & Innovation</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Real-time trend analysis and innovative campaign ideation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item group cursor-pointer p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="feature-icon bg-dream-blue/10 p-3 rounded-full group-hover:bg-dream-blue group-hover:text-white transition-all">
+                                            <i class="fas fa-bullhorn text-dream-blue group-hover:text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">PR & Media Coverage</h3>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm">Strategic PR campaigns and media relationship management</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="relative py-20 z-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Our <span class="text-dream-purple">Process</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    A proven methodology that transforms creative visions into measurable success stories
+                </p>
+            </div>
+            
+            <div class="process-timeline relative">
+                <div class="timeline-line absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-dream-purple via-dream-pink to-dream-gold h-full"></div>
+                
+                <div class="process-steps space-y-20">
+                    <div class="process-step flex items-center relative">
+                        <div class="step-content w-1/2 pr-12 text-right">
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Discovery & Strategy</h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                We begin by understanding your unique goals, audience, and brand vision to create a customized strategy.
+                            </p>
+                        </div>
+                        <div class="step-icon absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-dream-purple rounded-full flex items-center justify-center text-white text-xl font-bold z-10">
+                            1
+                        </div>
+                        <div class="step-visual w-1/2 pl-12">
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+                                <i class="fas fa-lightbulb text-4xl text-dream-purple mb-4"></i>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Initial consultation and strategic planning</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step flex items-center relative">
+                        <div class="step-visual w-1/2 pr-12 text-right">
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+                                <i class="fas fa-users text-4xl text-dream-pink mb-4"></i>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Team assembly and resource allocation</div>
+                            </div>
+                        </div>
+                        <div class="step-icon absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-dream-pink rounded-full flex items-center justify-center text-white text-xl font-bold z-10">
+                            2
+                        </div>
+                        <div class="step-content w-1/2 pl-12">
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Team & Resource Assembly</h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                We assemble the perfect team of creators, strategists, and specialists tailored to your project needs.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step flex items-center relative">
+                        <div class="step-content w-1/2 pr-12 text-right">
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Execution & Creation</h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Our team brings the strategy to life through high-quality content creation and campaign execution.
+                            </p>
+                        </div>
+                        <div class="step-icon absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-dream-blue rounded-full flex items-center justify-center text-white text-xl font-bold z-10">
+                            3
+                        </div>
+                        <div class="step-visual w-1/2 pl-12">
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+                                <i class="fas fa-rocket text-4xl text-dream-blue mb-4"></i>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Content creation and campaign launch</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step flex items-center relative">
+                        <div class="step-visual w-1/2 pr-12 text-right">
+                            <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+                                <i class="fas fa-chart-line text-4xl text-dream-gold mb-4"></i>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Performance monitoring and optimization</div>
+                            </div>
+                        </div>
+                        <div class="step-icon absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-dream-gold rounded-full flex items-center justify-center text-white text-xl font-bold z-10">
+                            4
+                        </div>
+                        <div class="step-content w-1/2 pl-12">
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Analysis & Optimization</h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                We continuously monitor performance and optimize campaigns for maximum impact and ROI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="relative py-20 z-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-heading font-bold text-gray-900 dark:text-white mb-8">
+                Ready to <span class="text-dream-purple">Transform</span> Your Journey?
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+                Whether you're a creator looking to scale your influence or a brand seeking authentic partnerships, let's build something extraordinary together.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="contact.html" class="bg-dream-purple hover:bg-dream-pink text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                    Start Your Project
+                </a>
+                <a href="about.html" class="bg-transparent border-2 border-dream-purple text-dream-purple hover:bg-dream-purple hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300">
+                    Learn More About Us
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="relative bg-gray-900 dark:bg-black text-white py-16 z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-12 w-auto">
+                        <span class="text-2xl font-heading font-bold">DreamBridge Media</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Empowering Talents. Elevating Brands. Creating Legacy.
+                    </p>
+                    <p class="text-gray-500 italic">
+                        "Ohhh… just like that, a bridge got built – a DreamBridge! 😆"
+                    </p>
+                    <p><strong>Contact : </strong>contact@dreambridgemedia.in</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html#talent-management" class="hover:text-dream-purple transition-colors">Talent Management</a></li>
+                        <li><a href="services.html#influencer-marketing" class="hover:text-dream-purple transition-colors">Influencer Marketing</a></li>
+                        <li><a href="services.html#content-production" class="hover:text-dream-purple transition-colors">Content Production</a></li>
+                        <li><a href="services.html#brand-strategy" class="hover:text-dream-purple transition-colors">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-dream-purple transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-dream-purple transition-colors">Contact</a></li>
+                        <li><a href="legal.html" class="hover:text-dream-purple transition-colors">Legal</a></li>
+                        <li><a href="terms.html" class="hover:text-dream-purple transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 DreamBridge Media. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="https://www.instagram.com/dreambridge.media/" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@dreambridge-media?si=PjMEeRAZiU1YA4ta" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreambridge-media" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/DreamBridgeM?t=MyayBaqWYIBngdS0k20zPA&s=08" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/DreamBridgeMedia?rdid=TCPnpbcr5nYmdWxr&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CBznoBxjW%2F" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="mailto:contact@dreambridgemedia.in" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://linktr.ee/dreambridgemedia" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-link text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+    <!-- Scripts -->
+    <script src="../js/theme-toggle.js"></script>
+    <script src="../js/webgl-bridge.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

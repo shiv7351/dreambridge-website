@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - DreamBridge Media</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Terms and conditions for DreamBridge Media digital entertainment services, including service agreements and user responsibilities.">
+    <meta name="keywords" content="terms, conditions, service agreement, dreambridge media terms">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dream-purple': '#6366f1',
+                        'dream-pink': '#ec4899',
+                        'dream-blue': '#06b6d4',
+                        'dream-gold': '#f59e0b',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-10 w-auto">
+                    <span class="text-xl font-heading font-bold text-dream-purple">DreamBridge Media</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">About</a>
+                    <a href="services.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Services</a>
+                    <a href="contact.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl md:text-8xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Terms & <span class="text-dream-purple">Conditions</span>
+                </h1>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Service agreements and terms governing DreamBridge Media partnerships
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Terms Content -->
+    <section class="relative py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <!-- Introduction -->
+            <div class="terms-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Service Agreement</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        <strong>Effective Date:</strong> June 22, 2025<br>
+                        <strong>Last Updated:</strong> June 22, 2025
+                    </p>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Welcome to DreamBridge Media. These Terms and Conditions ("Terms") govern your use of our services and establish the legal relationship between you ("Client," "Creator," or "User") and DreamBridge Media ("Company," "we," "our," or "us").
+                    </p>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        By engaging our services, accessing our website, or entering into any business relationship with DreamBridge Media, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Service Definitions -->
+            <div class="terms-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Service Definitions</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Talent Management Services</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Comprehensive representation and career development for digital creators, including but not limited to brand development, growth strategy, contract negotiation, and partnership facilitation.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Influencer Marketing Services</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Strategic campaign development and execution connecting brands with appropriate creators for authentic marketing initiatives and brand partnerships.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Content Production Services</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Professional content creation including video production, photography, graphic design, copywriting, and post-production services for digital platforms.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Strategic Consulting</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Advisory services for digital strategy, brand positioning, market analysis, and growth planning in the digital entertainment space.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Client Responsibilities -->
+            <div class="terms-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Client Responsibilities</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Information Accuracy</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Provide accurate and complete information about business objectives</li>
+                        <li>Disclose relevant brand guidelines, restrictions, and compliance requirements</li>
+                        <li>Maintain updated contact information and communication preferences</li>
+                        <li>Notify DreamBridge Media of any material changes affecting the project</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Collaboration & Communication</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Respond to requests for information within agreed timeframes</li>
+                        <li>Participate in scheduled meetings and review sessions</li>
+                        <li>Provide timely feedback on deliverables and campaign materials</li>
+                        <li>Maintain professional communication standards</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Payment Terms</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Remit payments according to agreed-upon schedule and terms</li>
+                        <li>Notify of any billing discrepancies within 30 days</li>
+                        <li>Maintain current payment information and authorize necessary charges</li>
+                        <li>Cover any applicable taxes, fees, or third-party costs as outlined in agreements</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Creator Obligations -->
+            <div class="terms-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Creator Obligations</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Content Standards</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Maintain high-quality content standards aligned with brand guidelines</li>
+                        <li>Adhere to platform policies and community guidelines</li>
+                        <li>Ensure content authenticity and transparent disclosure of partnerships</li>
+                        <li>Respect intellectual property rights and avoid copyright infringement</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Professional Conduct</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Maintain professional behavior in all brand interactions</li>
+                        <li>Meet agreed-upon deadlines and deliverable requirements</li>
+                        <li>Communicate any potential conflicts of interest</li>
+                        <li>Follow FTC guidelines for sponsored content and disclosure</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Exclusivity & Conflicts</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Creators must disclose any existing brand relationships or exclusivity agreements that may impact proposed partnerships. DreamBridge Media will work to avoid conflicts of interest and ensure appropriate brand matching.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Payment & Billing -->
+            <div class="terms-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Payment & Billing Terms</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Service Fees</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Service fees are determined based on project scope, duration, and complexity. All fees will be clearly outlined in individual service agreements or statements of work.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Payment Schedule</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                        <li>Initial deposits may be required to commence services</li>
+                        <li>Monthly retainers are due in advance of service period</li>
+                        <li>Project-based fees follow milestone-based payment schedule</li>
+                        <li>Final payments are due within 30 days of project completion</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Late Payments</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Late payments may result in service suspension and additional fees. Interest charges of 1.5% per month may be applied to overdue balances.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Refund Policy</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Refunds are considered on a case-by-case basis for undelivered services. Completed work, strategic consulting, and time-based services are generally non-refundable.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Termination -->
+            <div class="terms-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Termination & Cancellation</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Termination by Client</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Clients may terminate services with 30 days written notice. Early termination may result in cancellation fees and payment for work completed to date.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Termination by DreamBridge Media</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        We reserve the right to terminate services for breach of terms, non-payment, or conduct that conflicts with our values and professional standards.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Post-Termination</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Upon termination, all outstanding invoices become immediately due. DreamBridge Media will provide transition assistance and final deliverables as agreed upon.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Dispute Resolution -->
+            <div class="terms-section mb-16">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Dispute Resolution</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Mediation</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Any disputes arising from our services will first be addressed through good faith mediation. Both parties commit to working collaboratively toward resolution.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Governing Law</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        These Terms are governed by applicable local laws and regulations. Any legal proceedings will be conducted in the appropriate jurisdiction.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Limitation of Liability</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        DreamBridge Media's total liability for any claims is limited to the total amount paid for services. We are not liable for indirect, consequential, or punitive damages.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Updates & Amendments -->
+            <div class="terms-section">
+                <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">Terms Updates</h2>
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        DreamBridge Media reserves the right to update these Terms to reflect changes in our services, legal requirements, or business practices.
+                    </p>
+                    <div class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <p><strong>Notification:</strong> Clients will be notified of material changes 30 days in advance</p>
+                        <p><strong>Acceptance:</strong> Continued use of services constitutes acceptance of updated Terms</p>
+                        <p><strong>Questions:</strong> Contact support@dreambridgemedia.in for clarification</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="relative bg-gray-900 dark:bg-black text-white py-16 z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-12 w-auto">
+                        <span class="text-2xl font-heading font-bold">DreamBridge Media</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Empowering Talents. Elevating Brands. Creating Legacy.
+                    </p>
+                    <p class="text-gray-500 italic">
+                        "Ohhh… just like that, a bridge got built – a DreamBridge! 😆"
+                    </p>
+                    <p><strong>Contact : </strong>contact@dreambridgemedia.in</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html#talent-management" class="hover:text-dream-purple transition-colors">Talent Management</a></li>
+                        <li><a href="services.html#influencer-marketing" class="hover:text-dream-purple transition-colors">Influencer Marketing</a></li>
+                        <li><a href="services.html#content-production" class="hover:text-dream-purple transition-colors">Content Production</a></li>
+                        <li><a href="services.html#brand-strategy" class="hover:text-dream-purple transition-colors">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-dream-purple transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-dream-purple transition-colors">Contact</a></li>
+                        <li><a href="legal.html" class="hover:text-dream-purple transition-colors">Legal</a></li>
+                        <li><a href="terms.html" class="hover:text-dream-purple transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 DreamBridge Media. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="https://www.instagram.com/dreambridge.media/" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@dreambridge-media?si=PjMEeRAZiU1YA4ta" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreambridge-media" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/DreamBridgeM?t=MyayBaqWYIBngdS0k20zPA&s=08" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/DreamBridgeMedia?rdid=TCPnpbcr5nYmdWxr&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CBznoBxjW%2F" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="mailto:contact@dreambridgemedia.in" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://linktr.ee/dreambridgemedia" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-link text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/theme-toggle.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

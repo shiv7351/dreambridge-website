@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DreamBridge Media</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about DreamBridge Media's founding story, mission, and the visionary behind the full-service digital entertainment company.">
+    <meta name="keywords" content="about dreambridge media, founder story, digital entertainment company, creator entrepreneur">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dream-purple': '#6366f1',
+                        'dream-pink': '#ec4899',
+                        'dream-blue': '#06b6d4',
+                        'dream-gold': '#f59e0b',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+
+        <style>
+        /* Co-founder Section Styles */
+        .dreambridge-intro-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transform: translateY(0);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dreambridge-intro-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
+        }
+
+        .co-founder-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 250, 251, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0) scale(1);
+        }
+
+        .dark .co-founder-card {
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.95) 0%, rgba(31, 41, 55, 0.95) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .co-founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .co-founder-card:hover::before {
+            left: 100%;
+        }
+
+        .co-founder-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.3);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .co-founder-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: linear-gradient(45deg, #6366f1, #ec4899, #f59e0b);
+            padding: 3px;
+            transition: all 0.5s ease;
+        }
+
+        .co-founder-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 3px;
+            background: linear-gradient(45deg, #6366f1, #ec4899, #f59e0b);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            to { transform: rotate(360deg); }
+        }
+
+        .co-founder-image img {
+            border-radius: 17px;
+            transition: transform 0.5s ease;
+        }
+
+        .co-founder-card:hover .co-founder-image img {
+            transform: scale(1.05);
+        }
+
+        .content-container {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .content-preview {
+            max-height: 120px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-full {
+            max-height: 1000px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-full .additional-content {
+            animation: slideInUp 0.6s ease forwards;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .read-more-btn {
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .read-more-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ec4899, #f59e0b);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .read-more-btn:hover::before {
+            left: 0;
+        }
+
+        .read-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        .quote-section {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));
+            border-left: 4px solid #f59e0b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            font-size: 4rem;
+            color: rgba(245, 158, 11, 0.3);
+            font-family: serif;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .co-founder-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .co-founder-card {
+                margin: 0 1rem;
+            }
+            
+            .content-preview {
+                max-height: 100px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .co-founder-image {
+                height: 200px;
+            }
+        }
+
+        /* Enhanced animation for content expansion */
+        .expanding {
+            animation: expandCard 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.2);
+        }
+
+        .collapsing {
+            animation: collapseCard 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes expandCard {
+            from {
+                transform: translateY(-15px) scale(1.02);
+            }
+            to {
+                transform: translateY(-20px) scale(1.03);
+                box-shadow: 0 35px 70px -15px rgba(99, 102, 241, 0.25);
+            }
+        }
+
+        @keyframes collapseCard {
+            from {
+                transform: translateY(-20px) scale(1.03);
+                box-shadow: 0 35px 70px -15px rgba(99, 102, 241, 0.25);
+            }
+            to {
+                transform: translateY(-15px) scale(1.02);
+                box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.3);
+            }
+        }
+
+        /* Pulse animation for images */
+        .co-founder-image::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #6366f1, #ec4899, #f59e0b);
+            z-index: -1;
+            opacity: 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(1.05);
+            }
+        }
+    </style>
+
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+    <!-- Bridge Background Canvas -->
+    <canvas id="bridge-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+    
+    <!-- Stars Background -->
+    <div id="stars" class="fixed inset-0 w-full h-full pointer-events-none z-0"></div>
+    
+    <!-- Cursor Trail -->
+    <div id="cursor-trail" class="fixed pointer-events-none z-50"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-10 w-auto">
+                    <span class="text-xl font-heading font-bold text-dream-purple">DreamBridge Media</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-dream-purple font-semibold">About</a>
+                    <a href="services.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Services</a>
+                    <a href="contact.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-dream-purple transition-colors">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 z-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl md:text-8xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    About <span class="text-dream-purple">DreamBridge</span>
+                </h1>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    The story of a creator who built a bridge for other creators and brands to find their true potential.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Founder Story Section -->
+    <section class="relative py-20 z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="founder-image-section">
+                    <div class="relative">
+                        <div class="founder-image-placeholder w-full h-96 bg-gradient-to-br from-dream-purple via-dream-pink to-dream-gold rounded-3xl flex items-center justify-center text-white text-6xl shadow-2xl">
+                            <img src="../assets/founder.jpg" alt="Founders" class="h-auto w-auto">
+                            
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-dream-purple">Creator</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Entrepreneur</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="founder-story">
+                    <h2 class="text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">
+                        From Creator <span class="text-dream-gold">to Bridge Builder</span>
+                    </h2>
+
+                    <div class="story-content space-y-6 text-lg text-gray-600 dark:text-gray-300">
+                        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                            DreamBridge Media was born from the lived experience of being both a creator and an entrepreneur. Our founder understood firsthand the challenges that talents face in scaling their influence and the struggles brands encounter in finding authentic creator partnerships.
+                        </p>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Having walked both sides of the journey – from building a personal brand as a creator to understanding the business needs of brands – the vision for DreamBridge Media became crystal clear: to bridge the gap between talent, content, and business success.
+                        </p>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                            What started as a simple idea – "What if there was a company that truly understood both creators and brands?" – evolved into a full-service digital entertainment ecosystem that empowers talents with opportunities, resources, and long-term vision while helping brands achieve meaningful impact through authentic creator-led influence.
+                        </p>
+                        
+                        <blockquote class="border-l-4 border-dream-gold pl-6 py-4 bg-gray-50 dark:bg-gray-800 rounded-r-lg">
+                            <p class="italic text-dream-gold font-medium">
+                                "Ohhh… just like that, a bridge got built – a DreamBridge! 😆"
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Co-Founders Section -->
+    <section class="relative py-20 z-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Meet Our <span class="text-dream-gold">Co-Founders</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    The visionaries behind DreamBridge Media's success
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 co-founder-grid">
+                <!-- Co-Founder 1: Kanhaiya Raj Pandey -->
+                <div class="co-founder-card p-8">
+                    <div class="co-founder-image w-full h-64 mb-6 relative">
+                        <img src="../assets/KanhaiyaRajPandey.jpeg" alt="Creative Environment" class="co-founder-image w-full h-64 mb-6 relative">
+                        <div class="w-full h-full bg-gradient-to-br from-dream-purple via-dream-pink to-dream-gold rounded-lg flex items-center justify-center text-white">
+                            <div class="text-center">
+                                <i class="fas fa-user-circle text-6xl mb-2"></i>
+                                <p class="text-sm font-semibold">Kanhaiya Raj Pandey</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-heading font-bold text-gray-900 dark:text-white mb-2">
+                            <span class="text-dream-gold">Kanhaiya Raj Pandey</span>
+                        </h3>
+                        <p class="text-dream-purple font-semibold mb-1">Co-Founder & Chief Creative Officer</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Actor | Comedian | Influencer | Entrepreneur</p>
+                    </div>
+                    
+                    <div class="content-container content-preview" id="content-1">
+                        <div class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            <p class="mb-4">
+                                <strong class="text-dream-purple">Kanhaiya Raj Pandey</strong> is an Indian Actor, Comedian, Influencer, Public Figure, and Entrepreneur, redefining the digital entertainment space through his unique blend of comedy, storytelling, and emotional connection.
+                            </p>
+                            
+                            <div class="additional-content" style="display: none;">
+                                <p class="mb-4">
+                                    Coming from a small village in Bihar, India, his passion for acting and making people laugh began at a very young age. At just 7 years old, he entered the world of digital content creation, driven purely by creativity and love for performance. Now at 13, he carries 6 years of hands-on experience in creating content that entertains, connects, and inspires.
+                                </p>
+                                
+                                <p class="mb-4">
+                                    His journey started with platforms like TikTok (5M+ followers) and Likee (1M+ followers), where he created relatable and fun lip-sync videos that connected with millions. Today, with over 100,000+ followers on Instagram, he has built a strong personal brand and a loyal global audience.
+                                </p>
+                                
+                                <p class="mb-4">
+                                    What makes his content stand out is the emotional depth behind the humor. He believes in motivating people without using motivational quotes — instead, he uses comedy to speak to real-life emotions and silent struggles, helping people feel lighter and more connected.
+                                </p>
+                                
+                                <p class="mb-6">
+                                    This strong connection with his audience has even attracted international recognition — including a Hollywood movie offer from London, UK.
+                                </p>
+                                
+                                <div class="quote-section p-4 rounded-lg mb-4">
+                                    <p class="italic text-dream-gold font-medium">
+                                        "From a small village in Bihar to becoming a digital inspiration, Kanhaiya Raj is more than just a content creator — he is a symbol of hope, joy, and unstoppable dreams."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-6">
+                        <button class="read-more-btn" onclick="toggleContent(1)">
+                            <span id="btn-text-1">Read More</span>
+                            <i class="fas fa-chevron-down ml-2" id="btn-icon-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Co-Founder 2: Pyush Agrawal -->
+                <div class="co-founder-card p-8">
+                    <div class="co-founder-image w-full h-64 mb-6 relative">
+                        <img src="../assets/PiyushAgrawal.JPG" alt="Creative Environment" class="co-founder-image w-full h-64 mb-6 relative">
+                        <div class="w-full h-full bg-gradient-to-br from-dream-blue via-dream-purple to-dream-pink rounded-lg flex items-center justify-center text-white">
+                            <div class="text-center">
+                                <i class="fas fa-user-tie text-6xl mb-2"></i>
+                                <p class="text-sm font-semibold">Pyush Agrawal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-heading font-bold text-gray-900 dark:text-white mb-2">
+                            <span class="text-dream-gold">Pyush Agrawal</span>
+                        </h3>
+                        <p class="text-dream-purple font-semibold mb-1">Co-Founder & Chief Vision Officer</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Entrepreneur | Brand Strategist | Vision Architect</p>
+                    </div>
+                    
+                    <div class="content-container content-preview" id="content-2">
+                        <div class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            <p class="mb-4">
+                                In a world where creators often chase brands and brands struggle to find real creators, <strong class="text-dream-purple">Pyush Agrawal</strong> stands at the intersection — not as a middleman, but as a visionary bridge builder.
+                            </p>
+                            
+                            <div class="additional-content" style="display: none;">
+                                <p class="mb-4">
+                                    Coming from Bikaner, Rajasthan, Pyush didn't grow up in a media hub or with a fancy title. He built his career from the ground up — as a freelance social media manager, then a strategist, and finally, an entrepreneur who deeply understands what brands truly need in today's creator economy: authenticity, impact, and results.
+                                </p>
+                                
+                                <p class="mb-4">
+                                    While Kanhaiya Raj Pandey brings the voice of creators, Pyush brings the mind of a marketer — someone who has worked closely with businesses, startups, and agencies to understand their pain points, expectations, and what drives ROI in a fast-changing digital world.
+                                </p>
+                                
+                                <p class="mb-4">
+                                    He's spent years behind screens, dashboards, and data — helping brands find the right voice, the right face, and the right formula to grow online. But more than strategy, Pyush believes in building relationships that last — where brands don't just collaborate with creators, but build trust, loyalty, and community.
+                                </p>
+                                
+                                <p class="mb-4">
+                                    At DreamBridge Media, Pyush leads the brand strategy, campaign design, business development, and growth vision — making sure every campaign delivers value, not just views.
+                                </p>
+                                
+                                <p class="mb-6">
+                                    Because in his eyes, marketing isn't about numbers — it's about meaning. Together with Kanhaiya, he's building a new-age media platform where brands feel understood, and creators feel supported. A space where talent meets opportunity — with ethics, empathy, and execution.
+                                </p>
+                                
+                                <div class="quote-section p-4 rounded-lg mb-4">
+                                    <p class="italic text-dream-gold font-medium">
+                                        "While creators speak the language of emotion, brands speak the language of impact. My job is to make them understand each other." – Pyush Agrawal
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-6">
+                        <button class="read-more-btn" onclick="toggleContent(2)">
+                            <span id="btn-text-2">Read More</span>
+                            <i class="fas fa-chevron-down ml-2" id="btn-icon-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="relative py-20 z-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Our <span class="text-dream-purple">Mission</span> & <span class="text-dream-pink">Vision</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="mission-card bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-xl">
+                    <div class="mission-icon mb-6">
+                        <i class="fas fa-bullseye text-5xl text-dream-purple"></i>
+                    </div>
+                    <h3 class="text-3xl font-heading font-bold text-gray-900 dark:text-white mb-6">Our Mission</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                        To empower creators and brands with the resources, strategies, and partnerships they need to build lasting influence and achieve sustainable growth in the digital entertainment landscape.
+                    </p>
+                    <div class="mission-points mt-8 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-dream-purple mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Empower talents with growth opportunities</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-dream-purple mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Create authentic brand-creator partnerships</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-dream-purple mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Deliver high-quality content and campaigns</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="vision-card bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-xl">
+                    <div class="vision-icon mb-6">
+                        <i class="fas fa-eye text-5xl text-dream-pink"></i>
+                    </div>
+                    <h3 class="text-3xl font-heading font-bold text-gray-900 dark:text-white mb-6">Our Vision</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                        To become the most trusted bridge in the digital entertainment industry, where creators evolve into leaders and brands find their authentic voice through meaningful creator collaborations.
+                    </p>
+                    <div class="vision-points mt-8 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-star text-dream-pink mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Transform creators into industry leaders</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-star text-dream-pink mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Revolutionize brand-creator relationships</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-star text-dream-pink mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Set new standards for digital entertainment</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="relative py-20 z-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Our <span class="text-dream-blue">Values</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    The pillars that support every bridge we build
+                </p>
+            </div>
+            
+            <div class="values-grid grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="value-card group">
+                    <div class="value-icon mb-6">
+                        <i class="fas fa-heart text-4xl text-red-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Authenticity</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We believe in genuine connections and authentic storytelling that resonates with real audiences.
+                    </p>
+                </div>
+                
+                <div class="value-card group">
+                    <div class="value-icon mb-6">
+                        <i class="fas fa-rocket text-4xl text-dream-blue group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Innovation</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We stay ahead of trends and continuously evolve our strategies to deliver cutting-edge solutions.
+                    </p>
+                </div>
+                
+                <div class="value-card group">
+                    <div class="value-icon mb-6">
+                        <i class="fas fa-handshake text-4xl text-dream-purple group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Partnership</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We build long-term relationships based on mutual trust, respect, and shared success.
+                    </p>
+                </div>
+                
+                <div class="value-card group">
+                    <div class="value-icon mb-6">
+                        <i class="fas fa-trophy text-4xl text-dream-gold group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Excellence</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We strive for excellence in every project, campaign, and partnership we undertake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Culture Section -->
+    <section class="relative py-20 z-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-heading font-bold text-gray-900 dark:text-white mb-6">
+                    Where <span class="text-dream-purple">Creators</span> Become <span class="text-dream-pink">Leaders</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Our culture is built on creativity, collaboration, and the belief that every creator has the potential to become an industry leader.
+                </p>
+            </div>
+            
+            <div class="culture-showcase grid lg:grid-cols-3 gap-8">
+                <div class="culture-card bg-white dark:bg-gray-900 rounded-2xl p-8">
+                    <img src="../assets/CreativeEnvironment1.png" alt="Creative Environment" class="w-full h-48 object-cover rounded-xl mb-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Creative Freedom</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We foster an environment where creativity thrives and innovative ideas are celebrated.
+                    </p>
+                </div>
+                
+                <div class="culture-card bg-white dark:bg-gray-900 rounded-2xl p-8">
+                    <img src="../assets/Collaboration.jpg" alt="Collaboration" class="w-full h-48 object-cover rounded-xl mb-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Collaborative Spirit</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We believe in the power of collaboration to create extraordinary results for creators and brands.
+                    </p>
+                </div>
+                
+                <div class="culture-card bg-white dark:bg-gray-900 rounded-2xl p-8">
+                    <img src="../assets/GrowthMindset.jpg" alt="Growth Mindset" class="w-full h-48 object-cover rounded-xl mb-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Growth Mindset</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We're committed to continuous learning and helping our talents reach their full potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="relative py-20 z-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-heading font-bold text-gray-900 dark:text-white mb-8">
+                Ready to Build Your <span class="text-dream-blue">Bridge</span>?
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+                Whether you're a creator looking to scale your influence or a brand seeking authentic partnerships, let's build something extraordinary together.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="contact.html" class="bg-dream-purple hover:bg-dream-pink text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                    Start Your Journey
+                </a>
+                <a href="services.html" class="bg-transparent border-2 border-dream-purple text-dream-purple hover:bg-dream-purple hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="relative bg-gray-900 dark:bg-black text-white py-16 z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="../assets/MainLogo.png" alt="DreamBridge Media" class="h-12 w-auto">
+                        <span class="text-2xl font-heading font-bold">DreamBridge Media</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Empowering Talents. Elevating Brands. Creating Legacy.
+                    </p>
+                    <p class="text-gray-500 italic">
+                        "Ohhh… just like that, a bridge got built – a DreamBridge! 😆"
+                    </p>
+                    <p><strong>Contact : </strong>contact@dreambridgemedia.in</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html#talent-management" class="hover:text-dream-purple transition-colors">Talent Management</a></li>
+                        <li><a href="services.html#influencer-marketing" class="hover:text-dream-purple transition-colors">Influencer Marketing</a></li>
+                        <li><a href="services.html#content-production" class="hover:text-dream-purple transition-colors">Content Production</a></li>
+                        <li><a href="services.html#brand-strategy" class="hover:text-dream-purple transition-colors">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-dream-purple transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-dream-purple transition-colors">Contact</a></li>
+                        <li><a href="legal.html" class="hover:text-dream-purple transition-colors">Legal</a></li>
+                        <li><a href="terms.html" class="hover:text-dream-purple transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 DreamBridge Media. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="https://www.instagram.com/dreambridge.media/" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@dreambridge-media?si=PjMEeRAZiU1YA4ta" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dreambridge-media" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/DreamBridgeM?t=MyayBaqWYIBngdS0k20zPA&s=08" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/DreamBridgeMedia?rdid=TCPnpbcr5nYmdWxr&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CBznoBxjW%2F" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="mailto:contact@dreambridgemedia.in" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://linktr.ee/dreambridgemedia" target="_blank" class="text-gray-400 hover:text-dream-purple transition-colors">
+                            <i class="fas fa-link text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/theme-toggle.js"></script>
+    <script src="../js/webgl-bridge.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Toggle content function for co-founder cards
+        function toggleContent(cardNumber) {
+            const contentContainer = document.getElementById(`content-${cardNumber}`);
+            const additionalContent = contentContainer.querySelector('.additional-content');
+            const btnText = document.getElementById(`btn-text-${cardNumber}`);
+            const btnIcon = document.getElementById(`btn-icon-${cardNumber}`);
+            const card = contentContainer.closest('.co-founder-card');
+            
+            const isExpanded = additionalContent.style.display !== 'none';
+            
+            if (!isExpanded) {
+                // Expanding
+                contentContainer.style.maxHeight = 'none';
+                additionalContent.style.display = 'block';
+                additionalContent.style.opacity = '0';
+                additionalContent.style.transform = 'translateY(20px)';
+                
+                btnText.textContent = 'Read Less';
+                btnIcon.style.transform = 'rotate(180deg)';
+                
+                // Smooth animation
+                requestAnimationFrame(() => {
+                    additionalContent.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    additionalContent.style.opacity = '1';
+                    additionalContent.style.transform = 'translateY(0)';
+                });
+                
+                // Add expanding class for card animation
+                card.classList.add('expanding');
+                setTimeout(() => card.classList.remove('expanding'), 600);
+            } else {
+                // Collapsing
+                additionalContent.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                additionalContent.style.opacity = '0';
+                additionalContent.style.transform = 'translateY(-20px)';
+                
+                btnText.textContent = 'Read More';
+                btnIcon.style.transform = 'rotate(0deg)';
+                
+                // Add collapsing class for card animation
+                card.classList.add('collapsing');
+                
+                setTimeout(() => {
+                    additionalContent.style.display = 'none';
+                    contentContainer.style.maxHeight = '120px';
+                    card.classList.remove('collapsing');
+                }, 400);
+            }
+        }
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate co-founder cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'slideInUp 0.8s ease forwards';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe co-founder cards
+            document.querySelectorAll('.co-founder-card').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.animationDelay = `${index * 0.2}s`;
+                observer.observe(card);
+            });
+
+            // Add hover effects for profile images
+            document.querySelectorAll('.co-founder-image').forEach(image => {
+                image.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05) rotate(2deg)';
+                });
+                
+                image.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

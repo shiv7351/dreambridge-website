@@ -1,0 +1,273 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Starry Background -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)"/>
+  
+  <!-- Stars scattered across the sky -->
+  <g fill="url(#starGlow)" opacity="0.6">
+    <!-- Small stars -->
+    <circle cx="150" cy="120" r="1.5"/>
+    <circle cx="340" cy="80" r="1"/>
+    <circle cx="520" cy="150" r="1.5"/>
+    <circle cx="780" cy="90" r="1"/>
+    <circle cx="950" cy="140" r="1.5"/>
+    <circle cx="1150" cy="70" r="1"/>
+    <circle cx="1340" cy="130" r="1.5"/>
+    <circle cx="1520" cy="100" r="1"/>
+    <circle cx="1680" cy="160" r="1.5"/>
+    <circle cx="1820" cy="85" r="1"/>
+    
+    <!-- Medium stars -->
+    <circle cx="250" cy="200" r="2"/>
+    <circle cx="650" cy="180" r="2"/>
+    <circle cx="1050" cy="220" r="2"/>
+    <circle cx="1450" cy="190" r="2"/>
+    <circle cx="1750" cy="210" r="2"/>
+    
+    <!-- Larger focal stars -->
+    <g>
+      <circle cx="400" cy="160" r="3"/>
+      <path d="M400 155 L401.5 160 L406.5 160 L402.75 163.25 L404.25 168.25 L400 165.5 L395.75 168.25 L397.25 163.25 L393.5 160 L398.5 160 Z" transform="scale(0.8)"/>
+    </g>
+    
+    <g>
+      <circle cx="1200" cy="140" r="3"/>
+      <path d="M1200 135 L1201.5 140 L1206.5 140 L1202.75 143.25 L1204.25 148.25 L1200 145.5 L1195.75 148.25 L1197.25 143.25 L1193.5 140 L1198.5 140 Z" transform="scale(0.8)"/>
+    </g>
+  </g>
+  
+  <!-- Main Bridge Structure -->
+  <g transform="translate(0, 400)">
+    <!-- Left Support Tower -->
+    <g transform="translate(300, 0)">
+      <rect x="-15" y="-200" width="30" height="280" fill="url(#towerGradient)"/>
+      <rect x="-25" y="-220" width="50" height="25" fill="url(#towerCapGradient)"/>
+      <!-- Tower details -->
+      <rect x="-12" y="-180" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+      <rect x="-12" y="-140" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+      <rect x="-12" y="-100" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+      <rect x="-12" y="-60" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+    </g>
+    
+    <!-- Right Support Tower -->
+    <g transform="translate(1620, 0)">
+      <rect x="-15" y="-200" width="30" height="280" fill="url(#towerGradient)"/>
+      <rect x="-25" y="-220" width="50" height="25" fill="url(#towerCapGradient)"/>
+      <!-- Tower details -->
+      <rect x="-12" y="-180" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+      <rect x="-12" y="-140" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+      <rect x="-12" y="-100" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+      <rect x="-12" y="-60" width="24" height="4" fill="url(#detailGradient)" opacity="0.7"/>
+    </g>
+    
+    <!-- Main Bridge Span -->
+    <path d="M300 -180 Q960 -120 1620 -180" stroke="url(#bridgeSpanGradient)" stroke-width="12" fill="none"/>
+    <path d="M300 -175 Q960 -115 1620 -175" stroke="url(#bridgeRailGradient)" stroke-width="4" fill="none"/>
+    
+    <!-- Support Cables -->
+    <g stroke="url(#cableGradient)" stroke-width="2" opacity="0.7">
+      <!-- Left side cables -->
+      <path d="M300 -180 L400 -150"/>
+      <path d="M300 -180 L500 -140"/>
+      <path d="M300 -180 L600 -135"/>
+      <path d="M300 -180 L700 -130"/>
+      <path d="M300 -180 L800 -125"/>
+      <path d="M300 -180 L900 -122"/>
+      
+      <!-- Right side cables -->
+      <path d="M1620 -180 L1520 -150"/>
+      <path d="M1620 -180 L1420 -140"/>
+      <path d="M1620 -180 L1320 -135"/>
+      <path d="M1620 -180 L1220 -130"/>
+      <path d="M1620 -180 L1120 -125"/>
+      <path d="M1620 -180 L1020 -122"/>
+    </g>
+    
+    <!-- Bridge Road/Deck -->
+    <path d="M300 -160 Q960 -100 1620 -160" stroke="url(#deckGradient)" stroke-width="8" fill="none" opacity="0.8"/>
+    
+    <!-- Bridge Lights -->
+    <g fill="url(#lightGlow)" opacity="0.8">
+      <circle cx="400" cy="-150" r="2"/>
+      <circle cx="550" cy="-138" r="2"/>
+      <circle cx="700" cy="-130" r="2"/>
+      <circle cx="850" cy="-125" r="2"/>
+      <circle cx="960" cy="-120" r="3"/>
+      <circle cx="1070" cy="-125" r="2"/>
+      <circle cx="1220" cy="-130" r="2"/>
+      <circle cx="1370" cy="-138" r="2"/>
+      <circle cx="1520" cy="-150" r="2"/>
+    </g>
+  </g>
+  
+  <!-- Additional Bridge Elements -->
+  <g transform="translate(0, 500)" opacity="0.4">
+    <!-- Secondary smaller bridge -->
+    <path d="M150 -100 Q400 -80 650 -100" stroke="url(#secondaryBridgeGradient)" stroke-width="4" fill="none"/>
+    <path d="M1270 -100 Q1520 -80 1770 -100" stroke="url(#secondaryBridgeGradient)" stroke-width="4" fill="none"/>
+  </g>
+  
+  <!-- Atmospheric Elements -->
+  <g opacity="0.3">
+    <!-- Subtle clouds -->
+    <ellipse cx="200" cy="250" rx="80" ry="20" fill="url(#cloudGradient)"/>
+    <ellipse cx="1700" cy="200" rx="100" ry="25" fill="url(#cloudGradient)"/>
+    
+    <!-- Light rays from stars -->
+    <g stroke="url(#lightRayGradient)" stroke-width="1" opacity="0.5">
+      <path d="M400 160 L410 300"/>
+      <path d="M1200 140 L1190 280"/>
+      <path d="M400 155 L380 295"/>
+      <path d="M1200 135 L1220 275"/>
+    </g>
+  </g>
+  
+  <!-- Floating Dream Elements -->
+  <g opacity="0.4">
+    <!-- Abstract flowing shapes representing dreams -->
+    <path d="M100 300 Q200 280 300 320 Q400 360 500 340" stroke="url(#dreamFlowGradient)" stroke-width="3" fill="none"/>
+    <path d="M1400 350 Q1500 330 1600 370 Q1700 410 1800 390" stroke="url(#dreamFlowGradient)" stroke-width="3" fill="none"/>
+    
+    <!-- Floating particles -->
+    <g fill="url(#particleGradient)">
+      <circle cx="250" cy="320" r="1.5"/>
+      <circle cx="450" cy="280" r="1"/>
+      <circle cx="1450" cy="340" r="1.5"/>
+      <circle cx="1650" cy="300" r="1"/>
+    </g>
+  </g>
+  
+  <!-- Gradients and Effects -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0.1" />
+      <stop offset="30%" style="stop-color:#1e293b;stop-opacity:0.05" />
+      <stop offset="70%" style="stop-color:#334155;stop-opacity:0.02" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:0.01" />
+    </linearGradient>
+    
+    <radialGradient id="starGlow">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.5" />
+    </radialGradient>
+    
+    <linearGradient id="towerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#475569;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <linearGradient id="towerCapGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#64748b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <linearGradient id="bridgeSpanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.6" />
+      <stop offset="25%" style="stop-color:#3b82f6;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="75%" style="stop-color:#a855f7;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <linearGradient id="bridgeRailGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.5" />
+      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:0.5" />
+    </linearGradient>
+    
+    <linearGradient id="cableGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#94a3b8;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#64748b;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <linearGradient id="deckGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <radialGradient id="lightGlow">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <linearGradient id="secondaryBridgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#64748b;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <radialGradient id="cloudGradient">
+      <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:0.1" />
+    </radialGradient>
+    
+    <linearGradient id="lightRayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0" />
+    </linearGradient>
+    
+    <linearGradient id="dreamFlowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <radialGradient id="particleGradient">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <linearGradient id="detailGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#94a3b8;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#64748b;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- Glow effects -->
+    <filter id="bridgeGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="starGlowFilter">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Animation styles -->
+  <style>
+    @keyframes bridge-shimmer {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.9; }
+    }
+    
+    @keyframes star-twinkle {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes light-pulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes dream-flow {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -20; }
+    }
+    
+    .bridge-shimmer { animation: bridge-shimmer 6s ease-in-out infinite; }
+    .star-twinkle { animation: star-twinkle 3s ease-in-out infinite; }
+    .light-pulse { animation: light-pulse 2s ease-in-out infinite; }
+    .dream-flow { 
+      stroke-dasharray: 10, 10; 
+      animation: dream-flow 4s linear infinite; 
+    }
+  </style>
+</svg>

@@ -1,0 +1,146 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="120" fill="url(#heroBg)" opacity="0.1"/>
+  
+  <!-- Main Bridge Structure -->
+  <g transform="translate(0,60)">
+    <!-- Left tower -->
+    <rect x="50" y="-40" width="8" height="50" fill="url(#towerGradient)"/>
+    <rect x="45" y="-45" width="18" height="8" fill="url(#towerGradient)"/>
+    
+    <!-- Right tower -->
+    <rect x="342" y="-40" width="8" height="50" fill="url(#towerGradient)"/>
+    <rect x="337" y="-45" width="18" height="8" fill="url(#towerGradient)"/>
+    
+    <!-- Main bridge curve -->
+    <path d="M58 -35 Q200 -15 342 -35" stroke="url(#bridgeMainGradient)" stroke-width="6" fill="none"/>
+    
+    <!-- Support cables -->
+    <g stroke="url(#cableGradient)" stroke-width="1.5" opacity="0.7">
+      <path d="M58 -35 L80 -20"/>
+      <path d="M58 -35 L100 -18"/>
+      <path d="M58 -35 L120 -16"/>
+      <path d="M58 -35 L140 -15"/>
+      <path d="M58 -35 L160 -15"/>
+      <path d="M58 -35 L180 -15"/>
+      <path d="M58 -35 L200 -15"/>
+      
+      <path d="M342 -35 L320 -20"/>
+      <path d="M342 -35 L300 -18"/>
+      <path d="M342 -35 L280 -16"/>
+      <path d="M342 -35 L260 -15"/>
+      <path d="M342 -35 L240 -15"/>
+      <path d="M342 -35 L220 -15"/>
+    </g>
+  </g>
+  
+  <!-- Dreams and aspirations -->
+  <g opacity="0.8">
+    <!-- Stars scattered around -->
+    <g fill="url(#starGradient)">
+      <path d="M80 25 L82 30 L87 30 L83.5 33.5 L85 38.5 L80 35.5 L75 38.5 L76.5 33.5 L73 30 L78 30 Z" transform="scale(0.6)"/>
+      <path d="M320 35 L322 40 L327 40 L323.5 43.5 L325 48.5 L320 45.5 L315 48.5 L316.5 43.5 L313 40 L318 40 Z" transform="scale(0.4)"/>
+      <path d="M150 20 L152 25 L157 25 L153.5 28.5 L155 33.5 L150 30.5 L145 33.5 L146.5 28.5 L143 25 L148 25 Z" transform="scale(0.5)"/>
+      <path d="M250 25 L252 30 L257 30 L253.5 33.5 L255 38.5 L250 35.5 L245 38.5 L246.5 33.5 L243 30 L248 30 Z" transform="scale(0.4)"/>
+    </g>
+    
+    <!-- Light rays -->
+    <g stroke="url(#lightGradient)" stroke-width="2" opacity="0.6">
+      <path d="M200 10 L200 25"/>
+      <path d="M190 12 L210 22"/>
+      <path d="M210 12 L190 22"/>
+    </g>
+    
+    <!-- Floating elements representing creativity -->
+    <g fill="url(#creativityGradient)" opacity="0.6">
+      <circle cx="120" cy="30" r="3"/>
+      <circle cx="280" cy="40" r="2.5"/>
+      <circle cx="170" cy="45" r="2"/>
+      <circle cx="300" cy="20" r="2.5"/>
+    </g>
+  </g>
+  
+  <!-- Company name integrated into bridge -->
+  <text x="200" y="95" text-anchor="middle" font-family="serif" font-size="24" font-weight="bold" fill="url(#nameGradient)">DreamBridge Media</text>
+  
+  <!-- Tagline -->
+  <text x="200" y="110" text-anchor="middle" font-family="sans-serif" font-size="10" fill="url(#taglineGradient)" opacity="0.8">Empowering Talents. Elevating Brands. Creating Legacy.</text>
+  
+  <!-- Gradients and Filters -->
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <linearGradient id="towerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="bridgeMainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cableGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b7280;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="lightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0" />
+    </linearGradient>
+    
+    <radialGradient id="creativityGradient">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.5" />
+    </radialGradient>
+    
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="taglineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6b7280;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4b5563;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Animation elements -->
+  <style>
+    @keyframes bridge-glow {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes star-twinkle {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    
+    .bridge-main { animation: bridge-glow 3s ease-in-out infinite; }
+    .stars { animation: star-twinkle 2s ease-in-out infinite; }
+  </style>
+</svg>
